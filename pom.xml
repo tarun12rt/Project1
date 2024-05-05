@@ -1,36 +1,316 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-
-  <groupId>org.example</groupId>
-  <artifactId>Project1</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <groupId>Tarun</groupId>
+  <artifactId>Tarun</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
-
-  <name>Project1</name>
+  <name>FrameWork_01</name>
   <url>http://maven.apache.org</url>
-
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
+    <maven-surefire-plugin.version>3.1.2</maven-surefire-plugin.version>
+    <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
+    <selenium.version>4.12.0</selenium.version>
+    <appium.version>8.5.1</appium.version>
+    <testng.version>7.8.0</testng.version>
+    <cucumber-java.version>7.13.0</cucumber-java.version>
+    <cucumber-junit.version>7.13.0</cucumber-junit.version>
+    <extentreports-cucumber7-adapter>1.14.0</extentreports-cucumber7-adapter>
+    <cucumber-testng.version>7.13.0</cucumber-testng.version>
+    <net.sourceforge.jexcelapi.version>2.6.12</net.sourceforge.jexcelapi.version>
+    <xml-apis.version>1.4.01</xml-apis.version>
+    <dom4j.version>1.6.1</dom4j.version>
+    <xmlrpc-client.version>3.1.3</xmlrpc-client.version>
+    <xmlrpc-common.version>3.1.3</xmlrpc-common.version>
+    <ws-commons-util.version>1.0.2</ws-commons-util.version>
+    <log4j-core.version>3.0.0-alpha1</log4j-core.version>
+    <simpleslackapi.version>1.0.0</simpleslackapi.version>
+    <slack-webhook.version>1.3.0</slack-webhook.version>
+    <jackson-core.version>2.15.2</jackson-core.version>
+    <commons-lang3.version>3.13.0</commons-lang3.version>
+    <json.version>20230618</json.version>
+    <json-path.version>2.8.0</json-path.version>
+    <apache.poi.version>5.2.0</apache.poi.version>
+    <poi-ooxml-schemas.version>3.14</poi-ooxml-schemas.version>
+    <jira-client.version>0.5</jira-client.version>
+    <extent-pdf-report.version>2.12.0</extent-pdf-report.version>
+    <cucumber-pdf-report.verson>2.14.0</cucumber-pdf-report.verson>
+    <cucumber-pdf-plugin.version>1.14.0</cucumber-pdf-plugin.version>
+    <table-layout.version>1.5.1</table-layout.version>
+    <assertj.version>3.22.0</assertj.version>
+    <webdrivermanager.version>5.5.3</webdrivermanager.version>
+    <slf4j-simple.version>2.0.9</slf4j-simple.version>
+    <rest-assured.version>5.4.0</rest-assured.version>
   </properties>
-
   <dependencies>
-    <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
-      <version>4.19.1</version>
+      <version>${selenium.version}</version>
     </dependency>
-
+    <dependency>
+      <groupId>io.appium</groupId>
+      <artifactId>java-client</artifactId>
+      <version>${appium.version}</version>
+    </dependency>
     <!-- https://mvnrepository.com/artifact/org.testng/testng -->
     <dependency>
       <groupId>org.testng</groupId>
       <artifactId>testng</artifactId>
-      <version>7.10.1</version>
+      <version>${testng.version}</version>
       <scope>test</scope>
     </dependency>
-
-
-
+    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-java</artifactId>
+      <version>${cucumber-java.version}</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-junit</artifactId>
+      <version>${cucumber-junit.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
+    <dependency>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-surefire-plugin</artifactId>
+      <version>${maven-surefire-plugin.version}</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber7-adapter -->
+    <dependency>
+      <groupId>tech.grasshopper</groupId>
+      <artifactId>extentreports-cucumber7-adapter</artifactId>
+      <version>${extentreports-cucumber7-adapter}</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-testng</artifactId>
+      <version>${cucumber-testng.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>net.sourceforge.jexcelapi</groupId>
+      <artifactId>jxl</artifactId>
+      <version>${net.sourceforge.jexcelapi.version}</version>
+    </dependency>
+    <!-- This Jar file is to avoid firefox exception -->
+    <dependency>
+      <groupId>xml-apis</groupId>
+      <artifactId>xml-apis</artifactId>
+      <version>${xml-apis.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>dom4j</groupId>
+      <artifactId>dom4j</artifactId>
+      <version>${dom4j.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.xmlrpc</groupId>
+      <artifactId>xmlrpc-client</artifactId>
+      <version>${xmlrpc-client.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.xmlrpc</groupId>
+      <artifactId>xmlrpc-common</artifactId>
+      <version>${xmlrpc-common.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.ws.commons.util</groupId>
+      <artifactId>ws-commons-util</artifactId>
+      <version>${ws-commons-util.version}</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-core</artifactId>
+      <version>${log4j-core.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.ullink.slack</groupId>
+      <artifactId>simpleslackapi</artifactId>
+      <version>${simpleslackapi.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>net.gpedro.integrations.slack</groupId>
+      <artifactId>slack-webhook</artifactId>
+      <version>${slack-webhook.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-core</artifactId>
+      <version>${jackson-core.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>${commons-lang3.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.json</groupId>
+      <artifactId>json</artifactId>
+      <version>${json.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.jayway.jsonpath</groupId>
+      <artifactId>json-path</artifactId>
+      <version>${json-path.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi</artifactId>
+      <version>${apache.poi.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi-ooxml</artifactId>
+      <version>${apache.poi.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi-ooxml-schemas</artifactId>
+      <version>${poi-ooxml-schemas.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi-excelant</artifactId>
+      <version>${apache.poi.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi-scratchpad</artifactId>
+      <version>${apache.poi.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>net.rcarz</groupId>
+      <artifactId>jira-client</artifactId>
+      <version>${jira-client.version}</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>tech.grasshopper</groupId>
+      <artifactId>extent-pdf-report</artifactId>
+      <version>${extent-pdf-report.version}</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/tech.grasshopper/cucumber-pdf-report -->
+    <dependency>
+      <groupId>tech.grasshopper</groupId>
+      <artifactId>cucumber-pdf-report</artifactId>
+      <version>${cucumber-pdf-report.verson}</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/tech.grasshopper/cucumber-pdf-plugin -->
+    <dependency>
+      <groupId>tech.grasshopper</groupId>
+      <artifactId>cucumber-pdf-plugin</artifactId>
+      <version>${cucumber-pdf-plugin.version}</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/tech.grasshopper/table-layout -->
+    <dependency>
+      <groupId>tech.grasshopper</groupId>
+      <artifactId>table-layout</artifactId>
+      <version>${table-layout.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.assertj</groupId>
+      <artifactId>assertj-core</artifactId>
+      <version>${assertj.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.github.bonigarcia</groupId>
+      <artifactId>webdrivermanager</artifactId>
+      <version>${webdrivermanager.version}</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-simple</artifactId>
+      <version>${slf4j-simple.version}</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>${maven-compiler-plugin.version}</version>
+        <configuration>
+          <source>${maven.compiler.source}</source>
+          <target>${maven.compiler.target}</target>
+          <encoding>UTF-8</encoding>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>${maven-surefire-plugin.version}</version>
+        <configuration>
+          <!-- ${ExecMode}    ==> ParallelTestRun / SingleTestRun      -->
+          <includes>
+            <include>**/${ExecMode}.class</include>
+            <!-- <include>**/ExecutionParallelTest.class</include>  -->
+            <!-- <include>**/ExecutionSingleTest.class</include>-->
+          </includes>
+          <systemPropertyVariables>
+            <environment>${ApplicationName}</environment>
+            <environment>${DriverTimeOut}</environment>
+            <environment>${WaitTimeOut}</environment>
+            <environment>${FluentWaitTimeOut}</environment>
+            <environment>${strExecutionProvider}</environment>
+            <environment>${strExecutionEnvironment}</environment>
+            <environment>${strOSType}</environment>
+            <environment>${strBrowserType}</environment>
+            <environment>${strApplicationType}</environment>
+            <environment>${PlatformVersion}</environment>
+            <environment>${DeviceName}</environment>
+            <environment>${PackageName}</environment>
+            <environment>${AppActivity}</environment>
+            <environment>${AppPath}</environment>
+            <environment>${AndroidAppName}</environment>
+            <environment>${IOSAppName}</environment>
+            <environment>${Reset}</environment>
+            <environment>${FullReset}</environment>
+            <environment>${NEWCommandTimeOut}</environment>
+            <environment>${UDID}</environment>
+            <environment>${WDA}</environment>
+            <environment>${BundleID}</environment>
+            <environment>${AutoAcceptAlert}</environment>
+            <environment>${LaunchTime}</environment>
+            <environment>${AppiumServer}</environment>
+            <environment>${AppiumPort}</environment>
+            <environment>${StartAppiumServer}</environment>
+            <environment>${RemoteServer}</environment>
+            <environment>${RemotePort}</environment>
+            <environment>${BrowserStackName}</environment>
+            <environment>${BrowserStackKey}</environment>
+            <environment>${BSAndroidAppName}</environment>
+            <environment>${BSAndroidBuildName}</environment>
+            <environment>${BSIOSAppName}</environment>
+            <environment>${BSIOSBuildName}</environment>
+            <environment>${BSProject}</environment>
+            <environment>${BSDevice}</environment>
+            <environment>${BSOSVersion}</environment>
+            <environment>${BSWebBuildName}</environment>
+            <environment>${BSWebBrowser}</environment>
+            <environment>${JIRA_ISSUE}</environment>
+            <environment>${JIRA_USERID}</environment>
+            <environment>${JIRA_USER_PASSWORD}</environment>
+            <environment>${JIRA_URL}</environment>
+            <environment>${JIRA_PROJECT}</environment>
+            <environment>${JIRA_ASSIGNEE}</environment>
+            <environment>${BSLocation}</environment>
+            <environment>${BSGeoLocation}</environment>
+            <environment>${BSNetworkProfile}</environment>
+            <environment>${sendEmail}</environment>
+          </systemPropertyVariables>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>

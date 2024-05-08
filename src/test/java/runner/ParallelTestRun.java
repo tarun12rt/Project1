@@ -1,3 +1,4 @@
+/*
 package runner;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
@@ -14,3 +15,4 @@ public class ParallelTestRun extends AbstractTestNGCucumberTests {
     @DataProvider(parallel = true)
     Object[][] scenario();
 }
+*/

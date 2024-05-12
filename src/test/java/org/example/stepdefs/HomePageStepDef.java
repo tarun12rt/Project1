@@ -4,8 +4,8 @@ import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import org.example.pages.HomePage;
+import org.example.pages.SeleniumDriver;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 public class HomePageStepDef {
     private WebDriver driver;
@@ -13,7 +13,8 @@ public class HomePageStepDef {
 
     @Before
     public void setup(){
-        driver=new ChromeDriver();
+        driver = SeleniumDriver.getChromeDriver();
+        homePage = new HomePage();
     }
 
     @After
@@ -24,7 +25,7 @@ public class HomePageStepDef {
     }
 
     @Given("I launch the Application")
-    public void iLaunchTheApplication() {
-        homePage.launchApplication();
+    public void i_launch_the_application() {
+        homePage.launchBrowser();
     }
 }

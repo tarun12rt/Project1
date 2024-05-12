@@ -233,6 +233,12 @@
       <version>${slf4j-simple.version}</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>Tarun</groupId>
+      <artifactId>Tarun</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
   <build>
     <plugins>

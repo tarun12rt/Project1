@@ -4,8 +4,8 @@ import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
-import org.example.utility.HomePage;
-import org.example.utility.SeleniumDriver;
+import org.example.pages.HomePage;
+import org.example.pages.SeleniumDriver;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 

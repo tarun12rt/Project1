@@ -44,6 +44,7 @@
     <webdrivermanager.version>5.5.3</webdrivermanager.version>
     <slf4j-simple.version>2.0.9</slf4j-simple.version>
     <rest-assured.version>5.4.0</rest-assured.version>
+    <aventstack-version>5.1.1</aventstack-version>
   </properties>
   <dependencies>
     <dependency>
@@ -51,6 +52,14 @@
       <artifactId>selenium-java</artifactId>
       <version>${selenium.version}</version>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+    <dependency>
+      <groupId>com.aventstack</groupId>
+      <artifactId>extentreports</artifactId>
+      <version>${aventstack-version}</version>
+    </dependency>
+
+
     <dependency>
       <groupId>io.appium</groupId>
       <artifactId>java-client</artifactId>

@@ -1,43 +1,37 @@
 package org.example.stepdefs;
 
-import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import org.example.pages.BaseTest;
 import org.example.pages.HomePage;
-import org.example.pages.SeleniumDriver;
 import org.junit.Assert;
-import org.openqa.selenium.WebDriver;
 
-public class HomePageStepDef {
-    private WebDriver driver;
+public class HomePageStepDef extends BaseTest {
     private HomePage homePage;
 
+    @Override
     @Before
-    public void setup(){
-        driver = SeleniumDriver.getChromeDriver();
+    public void setUp() {
+        super.setUp();
         homePage = new HomePage(driver);
-    }
-
-    @After
-    public void tearDown(){
-        if(driver!=null){
-            driver.quit();
-        }
     }
 
     @Given("I launch the Application")
     public void i_launch_the_application() {
         homePage.launchBrowser();
+        test.pass("Launched the application successfully.");
     }
 
     @And("I Verify Amazon Logo on HomePage")
     public void iVerifyAmazonLogoOnHomePage() {
         Assert.assertTrue(homePage.verifyAmazonLogoOnHomePage());
+        test.pass("Verified Amazon Logo on HomePage.");
     }
 
     @And("I Verify Search Bar on HomePage")
     public void iVerifySearchBarOnHomePage() {
         Assert.assertTrue(homePage.verifySearchBarOnHomePage());
+        test.pass("Verified Search Bar on HomePage.");
     }
 }

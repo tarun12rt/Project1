@@ -1,4 +1,4 @@
-package runner;
+package org.example.runners;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -14,10 +14,10 @@ import org.junit.runner.RunWith;
                 "html:target/cucumber-reports/cucumber.html",
                 "json:target/cucumber-reports/cucumber.json",
                 "junit:target/cucumber-reports/cucumber.xml"
-                // Note: ExtentReports is configured in the BaseTest class, not here
         },
         monochrome = true                          // Optional: for more readable console output
 )
 public class TestRunner {
-        // This class remains empty, used only as a holder for the above annotations
+    // This class remains empty, used only as a holder for the above annotations
 }
+

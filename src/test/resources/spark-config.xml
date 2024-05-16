@@ -1,0 +1,8 @@
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="theme">standard</entry>
+    <entry key="documentTitle">Automation Test Report</entry>
+    <entry key="encoding">utf-8</entry>
+    <entry key="reportName">Automation Test Results</entry>
+    <entry key="timeStampFormat">yyyy-MM-dd HH:mm:ss</entry>
+</properties>

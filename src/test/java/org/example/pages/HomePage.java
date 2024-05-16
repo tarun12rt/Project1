@@ -1,7 +1,5 @@
 package org.example.pages;
 
-import org.example.pages.ElementUtils;
-import org.example.pages.WebDriverConfig;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 

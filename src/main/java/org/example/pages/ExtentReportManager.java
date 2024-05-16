@@ -5,13 +5,42 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
+import java.io.File;
+import java.io.IOException;
+
 public class ExtentReportManager {
     private static ExtentReports extent;
     private static ExtentTest test;
+    private static final String REPORTS_DIR = "Reports/cucumber-reports";
+    private static final String LATEST_REPORTS_DIR = REPORTS_DIR + "/LatestReports";
+
+    public static void setupLatestReportDir() throws IOException {
+        File latestReportsDir = new File(LATEST_REPORTS_DIR);
+        if (latestReportsDir.exists()) {
+            // Delete existing contents
+            for (File file : latestReportsDir.listFiles()) {
+                if (!file.isDirectory()) {
+                    file.delete();
+                }
+            }
+        } else {
+            // Create the directory
+            latestReportsDir.mkdirs();
+        }
+    }
+
+    public static String getLatestReportFileName(String baseName) {
+        return LATEST_REPORTS_DIR + "/" + ReportUtils.getReportFileName(baseName);
+    }
 
     public static ExtentReports getExtentReports() {
         if (extent == null) {
-            String reportFileName = "target/cucumber-reports/" + ReportUtils.getReportFileName("ExtentReport");
+            try {
+                setupLatestReportDir();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            String reportFileName = getLatestReportFileName("ExtentReport");
             ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(reportFileName);
             htmlReporter.config().setTheme(Theme.STANDARD);
             htmlReporter.config().setDocumentTitle("Automation Test Report");
@@ -36,5 +65,3 @@ public class ExtentReportManager {
         }
     }
 }
-
-

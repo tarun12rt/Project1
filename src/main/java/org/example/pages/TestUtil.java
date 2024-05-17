@@ -1,10 +1,6 @@
 package org.example.pages;
 
 import com.aventstack.extentreports.ExtentTest;
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
-import org.example.pages.SeleniumDriver;
-import org.example.pages.ExtentReportManager;
 import org.openqa.selenium.WebDriver;
 
 import java.io.IOException;

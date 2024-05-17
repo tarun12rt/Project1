@@ -11,12 +11,13 @@ import org.junit.runner.RunWith;
         tags = "@HomePageScenarios",              // Tags to filter which scenarios to run
         plugin = {
                 "pretty",
-                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
-                "html:target/cucumber-reports/cucumber.html",
-                "json:target/cucumber-reports/cucumber.json"
+                "html:Reports/cucumber-reports/cucumber.html",
+                "json:Reports/cucumber-reports/cucumber.json",
+                "junit:Reports/cucumber-reports/cucumber.xml",
+                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
         },
         monochrome = true                          // Optional: for more readable console output
 )
 public class TestRunner {
-    // This class remains empty, used only as a holder for the above annotations
+        // This class remains empty, used only as a holder for the above annotations
 }

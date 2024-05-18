@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features", // Path to your feature files
         glue = "org.example.stepdefs",            // Package containing step definitions
-        tags = "@HomePageScenarios",              // Tags to filter which scenarios to run
+        tags = "@test2",              // Tags to filter which scenarios to run
         plugin = {
                 "pretty",
                 "html:Reports/cucumber-reports/cucumber.html",

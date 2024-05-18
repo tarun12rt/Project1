@@ -1,29 +1,22 @@
 package org.example.stepdefs;
 
 import io.cucumber.java.Before;
-import io.cucumber.java.After;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import org.example.pages.BaseStepDef;
 import org.example.pages.HomePage;
 import org.example.pages.TestUtil;
 import org.junit.Assert;
-import org.openqa.selenium.WebDriver;
 
 import java.io.IOException;
 
-public class HomePageStepDef {
+public class HomePageStepDef extends BaseStepDef {
     private HomePage homePage;
 
     @Before
     public void setUp() throws IOException {
-        TestUtil.setUp();
-        WebDriver driver = TestUtil.getDriver();
+        super.setUp();
         homePage = new HomePage(driver);
-    }
-
-    @After
-    public void tearDown() {
-        TestUtil.tearDown();
     }
 
     @Given("I launch the Application")

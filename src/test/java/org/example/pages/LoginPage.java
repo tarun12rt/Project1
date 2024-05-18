@@ -14,14 +14,10 @@ public class LoginPage {
         this.utils = new ElementUtils(driver);
     }
 
-    public void launchBrowser() {
-        driver.get("https://www.amazon.in/");
-        WebDriverConfig.configureDriver(driver);
-    }
     private By signBtn = By.id("nav-link-accountList");
 
 
     public void clickOnSignButton() {
-
+       utils.clickElement(signBtn);
     }
 }

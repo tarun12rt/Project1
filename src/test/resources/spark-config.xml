@@ -1,11 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<extent-config>
+<?xml version="1.0" encoding="UTF-8" ?>
+<extentreports>
     <configuration>
-        <reportName>Extent Report</reportName>
+
+        <theme>dark</theme>
         <encoding>UTF-8</encoding>
-        <protocol>https</protocol>
-        <documentTitle>Test Report</documentTitle>
-        <reportHeadline>Test Automation Report</reportHeadline>
-        <theme>standard</theme>
+        <protocol>http</protocol>
+        <documentTitle>AutomationTarun</documentTitle>
+        <reportName>Automation Test Report Tarun</reportName>
+        <testViewChartLocation>bottom</testViewChartLocation>
+        <scripts>
+            <![CDATA[$(document).ready(function() {});]]>
+        </scripts>
+        <styles><![CDATA[]]></styles>
+
     </configuration>
-</extent-config>
+
+</extentreports>

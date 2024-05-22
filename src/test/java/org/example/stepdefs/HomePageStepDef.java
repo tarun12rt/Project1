@@ -5,9 +5,10 @@ import io.cucumber.java.en.Given;
 import org.example.pages.BaseStepDef;
 import org.example.pages.HomePage;
 import org.junit.Assert;
+import org.openqa.selenium.WebDriver;
 
-public class HomePageStepDef extends BaseStepDef {
-    private HomePage homePage;
+public class HomePageStepDef {
+     HomePage homePage = new HomePage(WebDriver driver);
 
     @Given("I launch the Application")
     public void i_launch_the_application() {

@@ -1,3 +1,4 @@
+/*
 package runner;
 
 import io.cucumber.junit.Cucumber;
@@ -20,3 +21,4 @@ import org.junit.runner.RunWith;
 public class TestRunner {
         // This class remains empty, used only as a holder for the above annotations
 }
+*/

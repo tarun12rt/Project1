@@ -11,6 +11,9 @@ public class GlobalConfig {
     public ExecutionEnvironment executionEnvironment;
     public String AppiumServer;
     public String AppiumPort;
+    public String AppPath;
+    public String AndroidAppName;
+    public String DeviceName;
     public int DriverTimeout;
     public int WaitTimeOut;
     public int FluentWaitTimeOut;
@@ -27,6 +30,9 @@ public class GlobalConfig {
         objConfig.AppiumServer=GetAppiumServer();
         objConfig.AppiumPort=GetAppiumPort();
         objConfig.StartAppiumServer=StartAppiumServer();
+        objConfig.AppPath=FileUtilities.GetValueFromPropOrPOM("AppPath");
+        objConfig.AndroidAppName=FileUtilities.GetValueFromPropOrPOM("AndroidAppName");
+        objConfig.DeviceName=FileUtilities.GetValueFromPropOrPOM("DeviceName");
         return objConfig;
     }
     public static boolean StartAppiumServer(){

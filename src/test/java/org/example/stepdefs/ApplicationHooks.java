@@ -1,3 +1,4 @@
+/*
 package org.example.stepdefs;
 
 import io.cucumber.java.After;
@@ -30,3 +31,4 @@ public class ApplicationHooks {
     }
 
 }
+*/

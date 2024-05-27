@@ -1,6 +1,6 @@
 package org.example.pages.driverFactory;
 
-import org.example.pages.config.GlobalConfig;
+//import org.example.pages.config.GlobalConfig;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.lang.reflect.MalformedParameterizedTypeException;
@@ -8,9 +8,9 @@ import java.lang.reflect.MalformedParameterizedTypeException;
 public class DriverFactory {
     public RemoteWebDriver driver;
     public static ThreadLocal<RemoteWebDriver> tlDriver = new ThreadLocal<>();
-    public static ThreadLocal<GlobalConfig> objGlobalConfig = new ThreadLocal<>();
+//    public static ThreadLocal<GlobalConfig> objGlobalConfig = new ThreadLocal<>();
 
-    public RemoteWebDriver init_Driver(GlobalConfig objConfig) throws MalformedParameterizedTypeException
+   /* public RemoteWebDriver init_Driver(GlobalConfig objConfig) throws MalformedParameterizedTypeException
     {
         objGlobalConfig.set(objConfig);
         String strAppiumURL="";
@@ -24,7 +24,7 @@ public class DriverFactory {
             }
 
         }
-    }
+    }*/
 
     public static synchronized RemoteWebDriver getDriver(){
         return tlDriver.get();

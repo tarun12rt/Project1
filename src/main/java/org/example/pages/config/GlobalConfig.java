@@ -1,3 +1,4 @@
+/*
 package org.example.pages.config;
 
 import org.example.pages.FileUtilities;
@@ -130,3 +131,4 @@ public class GlobalConfig {
 
 
 }
+*/

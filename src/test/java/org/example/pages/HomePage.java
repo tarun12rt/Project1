@@ -3,31 +3,28 @@ package org.example.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class HomePage {
+public class HomePage extends BaseStepDef2 {
     private WebDriver driver; // WebDriver instance
     private ElementUtils utils; // WebDriverUtils instance
+
+    public HomePage(WebDriver driver) {
+        this.driver = driver;
+    }
 
     private By amazonLogo = By.id("nav-logo-sprites");
     private By searchBar = By.id("nav-search-bar-form");
 
     // Constructor to initialize WebDriver and WebDriverUtils
-    public HomePage(WebDriver driver) {
+/*    public HomePage(WebDriver driver) {
         this.driver = driver;
         this.utils = new ElementUtils(driver);
-    }
+    }*/
 
-    public void launchBrowser() {
-        driver.get("https://www.amazon.in/");
-        WebDriverConfig.configureDriver(driver);
-    }
-
-    // Method to verify if Amazon logo is present on the homepage
     public boolean verifyAmazonLogoOnHomePage() {
-        return utils.isElementDisplayed(amazonLogo);
+        return driver.findElement(amazonLogo).isDisplayed();
     }
 
-    // Method to verify if search bar is present on the homepage
     public boolean verifySearchBarOnHomePage() {
-        return utils.isElementDisplayed(searchBar);
+        return driver.findElement(searchBar).isDisplayed();
     }
 }
